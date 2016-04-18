@@ -1,0 +1,25 @@
+<% if logged_in? %>
+
+  <div class="row">
+      
+<% if @users.any? %>
+<ol class="follow">
+    <h3>follower (<%= @users.count %>)</h3>
+    <% @users.each do |user| %>
+    <li>
+        <%= link_to gravatar_for(user, size: 70), user %>
+        <span class="user"><%=link_to user.name, user %></span>
+    </li>
+    <% end %>
+</ol>
+<% end %>
+  </div>
+<% else %>
+
+  <div class="center jumbotron">
+    <h1>Welcome to the Microposts</h1>
+
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+
+  </div>
+<% end %>
