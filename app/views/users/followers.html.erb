@@ -3,7 +3,7 @@
   <div class="row">
 
 <% if @users.any? %>
-<ol>
+<ol class="follow">
     <h3>follower (<%= @users.count %>)</h3>
     <% @users.each do |user| %>
     <li>

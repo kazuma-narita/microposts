@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8'
+top_builddir='/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8'
+
+set -a
+COMPARE="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/compare"
+COMPOSITE="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/composite"
+CONJURE="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/conjure"
+CONVERT="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/convert"
+DISPLAY="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/display"
+IDENTIFY="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/identify"
+MONTAGE="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities/montage" 
+VALIDATE="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/tests/validate"
+DRAWTEST="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/tests/drawtest"
+WANDTEST="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/tests/wandtest"
+LD_LIBRARY_PATH="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/coders"
+MAGICK_CONFIGURE_PATH="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/config:/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/config"
+MAGICK_FILTER_MODULE_PATH="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/filters"
+PATH="/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/utilities:/home/ubuntu/workspace/microposts/ImageMagick-6.9.3-8/tests:${PATH}"
+set +a

@@ -4,9 +4,18 @@
 <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
-    
-<%= f.text_area :content, placeholder: "Compose new micropost..." %>
-
+    <%= f.label :avatars, "ペットの写真"%><br>
+    <%= f.file_field :avatars, class: 'form-control' %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :tags, "タグ" %>
+    <%= f.text_field :tags, class: 'form-control', placeholder: "動物の種類を入れてください" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :content, "キャプション" %>
+    <%= f.text_field :content, class: 'form-control', placeholder: "キャプションを入れてください" %>
   </div>
   
 <%= f.submit "Post", class: "btn btn-primary" %>
