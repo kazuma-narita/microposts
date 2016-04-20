@@ -1,0 +1,10 @@
+<h1>Search</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.email_field :tags, class: 'form-control', placeholder: "タグを入れてください" %>
+      <%= f.submit "search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

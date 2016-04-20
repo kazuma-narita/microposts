@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
+  get 'search', to: 'search#search', as: 'search'
 
   resources :users do
     member do
@@ -11,9 +12,11 @@ Rails.application.routes.draw do
     end
   end
   
+
+  
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships, only: [:create, :destroy]
-  resources :search
+
 end

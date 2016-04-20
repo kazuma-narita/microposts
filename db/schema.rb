@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420094315) do
+ActiveRecord::Schema.define(version: 20160420134702) do
 
   create_table "microposts", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "avatar"
     t.string   "avatars"
     t.string   "tags"
   end
@@ -43,7 +42,6 @@ ActiveRecord::Schema.define(version: 20160420094315) do
     t.datetime "updated_at",      null: false
     t.string   "location"
     t.text     "profile"
-    t.string   "avatar"
   end
 
 end
