@@ -5,4 +5,13 @@ class Micropost < ActiveRecord::Base
   validates :avatars, presence: true
   validates :tags, presence: true
   mount_uploader :avatars, AvatarUploader
+  
+  def self.search(tag)
+    if tag
+      Micropost.where(['tags LIKE ?', "%#{tag}%"])
+    else
+      Micropost.all
+    end
+  end
+  
 end

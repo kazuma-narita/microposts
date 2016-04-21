@@ -1,0 +1,11 @@
+<h1>Search</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag({ :controller => 'search', :action => 'result' }) do %>
+
+      <p><%= text_field_tag :tag, params[:tag], class: 'form-control', placeholder: "タグを入れてください" %>
+      <%= submit_tag "search", class: "btn btn-primary" %></p>
+    <% end %>
+  </div>
+</div>

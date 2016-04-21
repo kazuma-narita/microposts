@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
-  get 'search', to: 'search#search', as: 'search'
+  get 'search', to: 'search#index'
+  post 'search/result', to: 'search#result'
 
   resources :users do
     member do
