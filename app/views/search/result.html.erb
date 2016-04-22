@@ -6,7 +6,7 @@
 
       <p>
         <%= text_field_tag :tag, params[:tag], class: 'form-control', placeholder: "タグを入れてください", required: true %>
-        <%= select_tag 'key[way]', options_for_select({"完全一致" => 0, "部分一致" => 1}) %>
+        <%= select_tag 'key[way]', options_for_select({"完全一致" => 0, "部分一致" => 1}), class: 'form-control' %>
         <%= submit_tag "search", class: "btn btn-primary" %>
         </p>
     <% end %>
